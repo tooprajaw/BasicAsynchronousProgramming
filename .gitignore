@@ -1,0 +1,15 @@
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/01.ChangeFromSyncToAsyncProgramming/obj
+/01.ChangeFromSyncToAsyncProgramming/bin
+/02.OperateTaskAsConcurrent/obj
+/02.OperateTaskAsConcurrent/bin
+/03.CompositionWithTasks/obj
+/03.CompositionWithTasks/bin
+/Cores/bin
+/Cores/obj
+/SynchrousProgramming/bin
+/SynchrousProgramming/obj
