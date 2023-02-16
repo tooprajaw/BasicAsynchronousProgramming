@@ -1,4 +1,5 @@
 ﻿using Cores;
+using System.Diagnostics;
 
 namespace _03.CompositionWithTasks
 {
@@ -6,6 +7,8 @@ namespace _03.CompositionWithTasks
     {
         static async Task Main(string[] args)
         {
+            Stopwatch sw = Stopwatch.StartNew();
+
             PourCoffee();
             Console.WriteLine("coffee is ready");
 
@@ -24,9 +27,9 @@ namespace _03.CompositionWithTasks
 
             await baconTask;
             Console.WriteLine("bacon is ready");
-
-
             Console.WriteLine("Breakfast is ready!");
+            sw.Stop();
+            Console.WriteLine($"Time usage : {sw.ElapsedMilliseconds}");
         }
 
         private static void PourOJ()

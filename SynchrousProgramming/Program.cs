@@ -1,4 +1,5 @@
 ﻿using Cores;
+using System.Diagnostics;
 
 namespace SynchrousProgramming
 {
@@ -6,6 +7,8 @@ namespace SynchrousProgramming
     {
         static void Main(string[] args)
         {
+            Stopwatch sw = Stopwatch.StartNew();
+
             PourCoffee();
             Console.WriteLine("coffee is ready");
 
@@ -20,15 +23,16 @@ namespace SynchrousProgramming
             ApplyJam(toast);
             Console.WriteLine("toast is ready");
 
-            Juice oj = PourOJ();
+            PourOJ();
             Console.WriteLine("oj is ready");
             Console.WriteLine("Breakfast is ready!");
+            sw.Stop();
+            Console.WriteLine($"Time usage : {sw.ElapsedMilliseconds}");
         }
 
-        private static Juice PourOJ()
+        private static void PourOJ()
         {
             Console.WriteLine("Pouring orange juice");
-            return new Juice();
         }
 
         private static void ApplyJam(Toast toast)
